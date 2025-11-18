@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #444;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #fff;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.language-toggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f1f5fb;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.download-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #0078ff;
+  color: white;
+  font-weight: bold;
+}
+
+.features,
+.how-to {
+  padding: 10px 20px;
+  background: white;
+  margin: 10px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
+
+.screenshots {
+  padding: 10px 20px;
+  background: #fff;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.screenshots h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.screenshot-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.screenshot-gallery img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features h3,
+.how-to h3,
+.screenshots h3 {
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
