@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCAudioHub Server Download</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f3f4f7;
+        color: #222;
+        line-height: 1.6;
+    }
+
+    header {
+        background: #3f51b5;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+    }
+
+    #lang-btn {
+        background: #fff;
+        color: #3f51b5;
+        border: none;
+        padding: 8px 16px;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 6px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px 20px 60px;
+    }
+
+    .card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 12px;
+        font-size: 1.8rem;
+    }
+
+    p {
+        margin-bottom: 14px;
+    }
+
+    .download-btn {
+        display: inline-block;
+        padding: 14px 22px;
+        background: #3f51b5;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    .download-btn:hover {
+        background: #303f9f;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        color: #666;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1 data-en="PCAudioHub Server Download" data-zh="PCAudioHub 服务端下载">
+        PCAudioHub Server Download
+    </h1>
+    <button id="lang-btn">中文</button>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2 data-en="What is PCAudioHub Server?" data-zh="什么是 PCAudioHub 服务端？">
+            What is PCAudioHub Server?
+        </h2>
+        <p data-en="PCAudioHub Server is the desktop component that allows your Android phone to act as a wireless or USB speaker for your PC."
+           data-zh="PCAudioHub 服务端是电脑端组件，用于让你的安卓手机变成电脑的 WiFi 或 USB 扬声器。">
+            PCAudioHub Server is the desktop component that allows your Android phone to act as a wireless or USB speaker for your PC.
+        </p>
+        <p data-en="You must install and run this software on your computer before your phone can receive audio."
+           data-zh="在手机接收电脑声音之前，你必须在电脑上安装并运行本软件。">
+            You must install and run this software on your computer before your phone can receive audio.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2 data-en="Download" data-zh="下载">
+            Download
+        </h2>
+
+        <p data-en="Click the button below to download the latest PCAudioHub Server for Windows."
+           data-zh="点击下方按钮下载适用于 Windows 的最新 PCAudioHub 服务端。">
+           Click the button below to download the latest PCAudioHub Server for Windows.
+        </p>
+
+        <a class="download-btn"
+           href="https://github.com/nolansoft/PCAudioHub/releases/download/PCAudioHubServer/PCAudioHubSetup.exe"
+           target="_blank"
+           data-en="Download for Windows"
+           data-zh="下载 Windows 版本">
+           Download for Windows
+        </a>
+    </div>
+
+    <div class="card">
+        <h2 data-en="How to Use" data-zh="使用方法">
+            How to Use
+        </h2>
+        <p data-en="1. Install and run PCAudioHub Server on your PC."
+           data-zh="1. 在电脑上安装并运行 PCAudioHub 服务端。">
+            1. Install and run PCAudioHub Server on your PC.
+        </p>
+        <p data-en="2. Install PCAudioHub on your Android device from Google Play."
+           data-zh="2. 从 Google Play 在你的安卓设备上安装 PCAudioHub。">
+            2. Install PCAudioHub on your Android device from Google Play.
+        </p>
+        <p data-en="3. Make sure your phone and PC are connected to the same WiFi (or USB)."
+           data-zh="3. 确保手机和电脑连接到同一个 WiFi（或 USB 连接）。">
+            3. Make sure your phone and PC are connected to the same WiFi (or USB).
+        </p>
+        <p data-en="4. Open the app on your phone and it will automatically detect your PC."
+           data-zh="4. 打开手机端 App，会自动发现你的电脑。">
+            4. Open the app on your phone and it will automatically detect your PC.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 PCAudioHub. All rights reserved.
+</footer>
+
+
+<script>
+let currentLang = "en";
+
+document.getElementById("lang-btn").onclick = function() {
+    currentLang = (currentLang === "en" ? "zh" : "en");
+    switchLanguage(currentLang);
+};
+
+function switchLanguage(lang) {
+    document.getElementById("lang-btn").innerText = (lang === "en" ? "中文" : "English");
+
+    document.querySelectorAll("[data-en]").forEach(elem => {
+        elem.innerText = elem.getAttribute(`data-${lang}`);
+    });
+}
+</script>
+
+</body>
+</html>
